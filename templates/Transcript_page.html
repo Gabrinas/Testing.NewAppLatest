@@ -1,0 +1,173 @@
+<DOCTYPE html>
+<html>
+<head>
+<title>Transcript Page</title>
+<style>
+#fit{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    margin-right: 20px;
+}
+
+.grp{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 5px;
+}
+
+.lk{
+    text-decoration: none;
+}
+
+#inst{
+    color: black;
+    text-align: justify;
+    background-color: white;
+    margin-left: 290px;
+    margin-right: 270px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-right: 10px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.foot{
+        
+        bottom: 0;
+        text-align: center;
+        width: 100%;
+        margin-top: 40px;
+}
+
+.but, .lk{
+  text-decoration: none;
+  line-height: 30px;
+}
+
+#nw{
+    display: flex;
+    justify-content: space-around; 
+    padding: 20px;
+
+}
+
+.rd{
+    color: black;
+}
+.main8{
+    margin-right: 15px;
+}
+
+</style>
+</head>
+<body bgcolor="pruple">
+<!-- start your code here -->
+<a style="color: white; padding: 15px" href = "#botom">Back to bottom</a>
+<a id = "top"></a>
+
+<div id = "nw">
+    <div style="margin-right: 20px;"><button><a class = "but" href = "{{ url_for('index') }}">Back to Home Page</a></button></div>
+    <div style="margin-right: 20px;"><button><a class = "but" href = "{{ url_for('Yoruba_corpus') }}">Yoruba Corpus Page</a></button></div>
+    <div style="margin-right: 20px;"><button><a class = "but" href = "{{ url_for('English_corpus') }}">English Corpus Page</a></button></div>
+    <div style="margin-right: 20px;"><button><a class = "but" href="https://docs.google.com/document/d/1l9d4gbEdt4EElNE_dIrEvHrcXxbPsHBQ1tfcKjyACmo/edit?usp=drive_link">General Domain Texts</a></button></div>
+    <div style="margin-right: 20px;"><button><a class = "but" href="https://docs.google.com/document/d/1l9d4gbEdt4EElNE_dIrEvHrcXxbPsHBQ1tfcKjyACmo/edit?usp=drive_link">Clinical Domain Texts</a></button></div>
+</div>    
+<p><marquee style="color: white; font-size: xx-large; font-weight: bold;"> You are welcome to the Transcript page. </marquee></p>
+
+<hr style="color: red; width: 1550px">
+<h1 style="color: white; text-align: center;">Kindly take note of the following</h1>
+<div id = "inst">
+<ul>
+    <li>You can navigate from this page to the <strong>general domian or public health domain</strong> folder for texts sourcing.</li>
+    <li>You can also return to the home page, Yoruba Corpus or English Corpus page using the navigation buttons above.</li>
+    <li>You also have shorter routes for the selection of text files of some selected transcripts as indicated in the navigation buttons below.</li>
+    <li>Kindly follow each of the links in relation to the recording tasks you want to carryout, or go directly via the General Domain Texts or Public Health Domain Texts link to find the exact subfolder.</li>   
+    <li> You can use the text area beneath each transcript link to store the transcripts obtained from the storage location, which the link earlier took you to.
+        You can also store texts using the text areas on any of the recording web page.</li>
+    <li>You will be given a range of 300 texts in a particular file document within a sub-folder.
+        The name of the domain (General or Public health), subfolder, and file name will be given to you.
+        The 300 texts are inside the file document.</li>
+    <li>The 300 file path looks like this GENERAL [main_folder] --> YOUTUBE_MALARIA_ENGLISH_PARTA [sub_folder] --> YOUTUBE_ENGLISH_TRANCRIPT_MALARIA_PARTA [file_name] --> YOUTUBE_MALARIA_PARTA_1_ [tag_name] + 44 [index_no]</li>
+    <li>Inside each file name you alone select only the index range of 300 allocated to you.</li>
+    <li>Do not altter any texts inside the file, you just make selection, copy and paste them in your texts area and close the file.</li>
+</div>
+
+<!--<a href="C:\Users\USER\Documents\Documents\Generative\Neural Machine Translation\Already in mendeley\New papers2\AUDIO RECODING WEBSITE\Home Page\templates">Open here</a>-->
+
+<!--  Overall div-->
+<div id = "fit">
+
+<!-- first main div-->
+<div class = "grp">
+<div><button><a class= "lk" href="https://docs.google.com/document/d/1Jxwn0VMcyUeSBleb5B3ZnLMZfovWcy90ZYZhbAzhEmM/edit?usp=drive_link"> <b>Iroyin Yoruba Transcripts</b></button></a></div>
+<div><p style="color: white; font-size: 20px;"> You can copy your texts here.</p></div>
+<div class="main8"><textarea rows = "15" cols="40"> Type...</textarea></div>
+</div>
+<!-- end of first main div-->
+
+<!-- second main div-->
+ <!--
+<div class = "grp">
+<div><button><a class= "lk" href="https://docs.google.com/document/d/1l9d4gbEdt4EElNE_dIrEvHrcXxbPsHBQ1tfcKjyACmo/edit?usp=drive_link"><b>Leipzip Yoruba Transcripts</b></button></a></div>
+<div><p style="color: white"> You can copy your texts here.</p></div>
+<div><textarea rows = "6"> Type...</textarea></div>
+</div>-->
+<!-- end of second main div-->
+
+<!-- third main div-->
+<div class = "grp">
+<div><button><a class= "lk" href="https://docs.google.com/document/d/1oybfYXxq8Kb37Ig_TMturxJdLeYN7YFax_aYxUPMJ6Y/edit?usp=drive_link"><b>Mozilla Common Voice</b></button></a></div>
+<div><p style="color: white; font-size: 20px;"> You can copy your texts here.</p></div>
+<div class="main8"><textarea rows = "15" cols="40"> Type...</textarea></div>
+</div>
+<!-- end of third main div-->
+
+<!-- fourth main div-->
+<div class = "grp">
+<div><button><a class= "lk"href="https://docs.google.com/document/d/1XdXOMV7JX29AxKnRxNz3t0bFUCqjPDgSYOt345JIAeU/edit?usp=drive_link"><b>NCBI Disease Transcripts</b></button></a></div>
+<div><p style="color: white; font-size: 20px;"> You can copy your texts here.</p></div>
+<div class="main8"><textarea rows = "15" cols="40"> Type...</textarea></div>
+</div>
+<!-- end of fourth main div-->
+
+<!-- fifth main div-->
+<div class = "grp">
+<div><button><a class= "lk" href="https://docs.google.com/document/d/1QAoAt5NgM3dnP8e1M6f1xe-otJPRTfh_9bJk9j4KieE/edit?usp=drive_link"><b>PubMed Transcripts</b></button></a></div>
+<div><p style="color: rgb(236, 241, 236); font-size: 20px;"> You can copy your texts here.</p></div>
+<div class="main8"><textarea rows = "15" cols="40"> Type...</textarea></div>
+</div>
+<!-- end of fifth main div-->
+
+<!-- sixth main div-->
+<div class = "grp">
+<div><button><a class= "lk" href="https://docs.google.com/document/d/1EB4alTr5bKYJkvnMtnZZ4l0OhwKrNmX25Z0dxt16C1M/edit?usp=drive_link"><b>Tedtalk English Transcripts</b></button></a></div>
+<div><p style="color: white; font-size: 20px;"> You can copy your texts here.</p></div>
+<div class="main8"><textarea rows = "15" cols="38"> Type...</textarea></div>
+</div>
+<!-- end of sixfth main div-->
+
+<!-- seventh main div-->
+ <!--
+<div class = "grp">
+<div><button><a class= "lk" href="https://docs.google.com/document/d/1Eic_T2WZO7mIdTrq9oRa6zLS3vkNaF_TRpQTNJrIKWk/edit?usp=drive_link"><b>WikiText Transcripts</b></button></a></div>
+<div><p style="color: white"> You can copy your texts here.</p></div>
+<div><textarea rows = "6"> Type...</textarea></div>
+</div>-->
+<!-- end of sixfth main div-->
+
+</div>
+<!-- end of the overall div-->
+
+
+<a id = "botom"></a>
+<a style="color: white;" href="#top">Back to top</a>
+
+<footer>
+    <div style="color: whitesmoke" class ="foot">&copy Copyright 2024 Speech Synthesis. All right reserved.</div></br></br>
+</footer>
+
+<!-- end your code here -->
+</body>
+</html>

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html id = "ht">
+<head>
+     <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crowdsourcing English-Yoruba Speech Corporal</title>
+<style>
+/*Responsiveness of the screen to different sizes.
+@media only screen and (max-width: 640px){
+  body{
+    background-color: salmon;}
+  }
+
+*@media only screen and (min-width: 641px) and (max-width: 1007px){
+  body{
+    background-color: orange;}
+}
+
+*@media screen and (min-width: 1008px){
+  body{
+    background-color: red;}
+}*/
+
+body{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 18px;
+  line-height: 40px;
+}
+
+.c1{
+    width: 400px;
+    height: 400px;
+   }
+
+#marg{
+  display: flex;
+  justify-content: space-between;
+  color: #222;
+  
+}
+
+.sp{
+    display: inline-block;
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+   }
+#lin{
+     display: block;
+     padding-right: 50px;
+     padding-left: 50px;
+     text-align: justify;
+     color: black;
+     font-size: 20px;
+    }
+.sp li{
+       display: inline-block;
+       font-size: 22px;
+       padding: 5px;
+      }
+p{
+      text-align: justify;
+      }
+
+.foot {
+        /*position: absolute;
+        #bottom: 0;*/
+        text-align: center;
+        width: 100%;
+        font-weight: bold;
+    }
+
+th{
+   color: black;
+   font-weight: normal;
+   text-align: left;
+   /*font-size: 20px;*/
+   white-space: nowrap;
+   height: 50px;
+   /*width: 50px;*/
+   }
+td{
+   text-align: left;
+  }
+button, table{
+              height: 30px;
+              border-radius: 5px;               
+             }
+table{
+      background-color: lightblue;
+      padding: 4px;
+      margin: 0px auto;
+     }
+.but{
+    text-decoration: none;
+    }
+
+button{
+       background-color: white;
+      }
+button:hover, button:focus {
+  outline: none;
+  background: blue;
+}
+.mq{
+  background-color: black;
+  height: 100px;
+  text-align: center;
+  padding-top: 40px;
+  border-radius: 10px;
+}
+
+.jn{
+  color: black;
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.par1{
+  color: black;
+  font-size: 20px;
+}
+.bN{
+  font-size: 30px;
+}
+#main1, #bn{
+  margin-left: 10px;
+  margin-right: 20px;
+  padding-right: 80px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.main1{
+  line-height: 24px;
+  font-size: 20px;
+  text-align: justify;
+}
+.main2{
+  text-align: justify;
+  width: 450px;
+}
+#p1, .main3{
+  font-size: 20px;
+}
+.main4:hover, .main4:focus {
+  outline: none;
+  background: lightblue;
+  text-decoration: none;
+}
+#bn{
+    /*background-image: url("IMG_20240115_184138.jpg");*/
+    margin-right: 0px;
+    margin-left: 0px;
+}
+.main5{
+  margin-right: 15px;
+}
+/*#gen{
+     width: 200px;
+    }*/
+</style>
+</head>
+
+<body bgcolor="white" id = "ft">
+<!-- start your code here -->
+<a style="color: #222; padding: 15px" href = "#botom">Back to bottom</a>
+<a id = "top"></a>
+
+<ul class = "sp">
+  <li><button style="height: 40px;"><a class = "but" href = "{{ url_for('English_corpus') }}"><h class="jn">Enlgish Corpus</h></a></button></li>
+  <li><button style="height: 40px;"><a class = "but" href = "{{ url_for('Yoruba_corpus') }}"> <h class="jn">Yoruba Corpus</h> </a></button></li>
+  <li><button style="height: 40px;"><a class = "but" href = "{{ url_for('Transcript_page') }}"> <h class="jn"> Transcript</h></a></button></li>
+  </ul>
+
+<h1> <center class="mq"><marquee loop = "infinity" style="color: white; font-size: 40px;"> This page has been developed to collect English-Yoruba parallel speech corporal for speech
+     synthesis study </marquee></center></h1> 
+
+
+<div id = "marg">
+<!--beginning of first main div-->
+<div id = "main1">
+<p id = "p1"><b> You are welcome to this page </b></p>
+
+<section class="main2">
+    <h1><center>Speech Synthesis</center></h1>
+  This is the generation, creation or synthesis of speech in another language.
+  In this project, English and Yoruba are the source and target languages respectively. 
+  The main focus of this work is to develop English-Yoruba parallel corporal for speech synthesis.
+  To assist in the future research work in speech processing, recognition, and synthesis, the coproral to be curated 
+    in this project would be publicly made available for research purposes.
+  <br>
+</section>
+
+<section class = "par1">
+<p>
+  <p class="main2">Speech synthesis can either be from texts or speeches (this project).
+    For speech-to-speech synthesis, parallel speech corporal of both the speaker language (source language) and the responder language (target language)
+    are utilised to train AI model developed for the sole purpose of training the data to obtain state-of-the-art results.
+    However, African Indigenous languages are Low Resourced in nature meaning there are insufficeints speech corporal
+    to train AI models. Hence, the reason for drawback or lack of development in the speech processing applications
+    for African languages unlike the prevalence of these technologies for the High Resourced Languages.
+  </p>
+  
+</section>
+</div>
+<!--end of first main div-->
+
+<!--beginning of second main div-->
+<div id = "bn">
+  <section>
+  <h1><center>About</center></h1>
+  <p> This web page has been developed to collect parallel accented English-Yoruba speech corporal
+    for speech synthesis research work. The aim is to obtain naturally accented corporal of both
+    English and Yoruba, and these corporal are to be made available for public use for research 
+    related to speech synthesis. <br>
+    Crowdsourced individual shall participate in recording their voices using
+    this platform. 
+    Three pages will be utilised for this tasks. These are the <a class="main4" style="text-decoration: none;" href = "{{ url_for('Transcript_page') }}"><h class="jn">Transcript page</h></a>,
+    <a class="main4" style="text-decoration: none;" href = "{{ url_for('Yoruba_corpus') }}"><h class="jn">Yoruba Corpus page</h></a> and <a class="main4" style="text-decoration: none;" href = "{{ url_for('English_corpus') }}"><h class="jn">English Corpus page</h></a>.
+    The <a class="main4" style="text-decoration: none;" href = "{{ url_for('Transcript_page') }}"><h class="jn">Transcript page</h></a> is to link you to the storage location of the transcripts.
+    The <a class="main4" style="text-decoration: none;" href = "{{ url_for('Yoruba_corpus') }}"><h class="jn">Yoruba Corpus page</h></a> is the page where you record your voice in Yoruba language.
+    The <a class="main4" style="text-decoration: none;" href = "{{ url_for('English_corpus') }}"><h class="jn">English Corpus page</h></a> is where you record your voice in English language.
+    You can also navigate these pages using the links on the top-left of this page. <br>
+    The recording exercises shall span a period of 5 working days from Monday to Friday.<br>
+    To participate in the recording activities, participants are to register their details using the link beneath
+    the video on the right side of this page. </p>
+<p>To ensure participants have the best experience in this recording 
+   exercises, a feedback form has been made available to know what improvement 
+   to make for the remaining days of this exercises-this can be found under the registration link.</p>
+ <!--<img src="ade.jpg" alt = "show"/>-->
+</section>
+</div>
+
+<!--End of second main div-->
+
+
+<!--beginning of third main div-->
+<section class="main5">
+<h><strong>Wants to Know More</strong></h><br>
+
+<p>If you wish to know more on how to navigate this Page
+  simply check this video out.
+</p>
+
+<video width = "400" height = "300" controls>
+  <source src="file:///C:/Users/USER/Videos/myvid.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+<!--<embed src="file:///C:/Users/USER/Videos/myvid.mp4" width = "300px" height = "300px">-->
+<!--<iframe src="file:///C:/Users/USER/Videos/myvid.mp4" width = "350" height="150" frameborder="0" allowfullscreen autoplay = "true" controls = "true"></iframe>-->
+
+
+
+<h><strong>Register Here</strong></h><br>
+ <a class="main4" style="text-decoration: none;" href="https://docs.google.com/forms/d/e/1FAIpQLSdFTgBE07pm2QwpnX6nNiGG0vcTE8dYJq4QmthVRNJCZbScEA/">Click Here to Register</a>
+<br>
+<h><strong>User Feedback</strong></h><br>
+<!--<center><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdKcN5TBdIBXcAvYUM4uCiYU_tzqPUNBq_pJnxmTZDCCQayVg/viewform?embedded=true" width="500" height="300" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe></center>-->
+<a class="main4" style="text-decoration: none;" href="https://docs.google.com/forms/d/e/1FAIpQLSdKcN5TBdIBXcAvYUM4uCiYU_tzqPUNBq_pJnxmTZDCCQayVg/">Click Here for User Feedback</a>
+</section>
+<!--
+<div id = "p3">
+<form id = "searchform" autocomplete = "on" action="{{ url_for('read_form')}}" method="post">
+<p><i style="color: #222; font-weight: bold;">Kindly register your details</i></p>
+<table id = "tb" border = "1" cellpadding = "5" cellspacing = "0">
+
+<tr>
+<th><label for "uname">Username: </label></th>
+<td><input autocomplete = "on" type = "text" id = "uname" name = "username" size = "23" placeholder = "input a username" required/></td>
+</tr>
+
+<tr>
+<th><label for "fname">Firstname:</label></th>
+<td><input autocomplete = "on" type = "text" id = "fname" name = "firstname" size = "23" placeholder = "your firstname"/></td>
+</tr>
+
+<tr>
+<th><label for "lname">Lastname: </label></th>
+<td><input autocomplete = "on" type = "text" id = "lname" name = "lastname" size = "23" placeholder = "your lastname" required/></td>
+</tr>
+
+
+<tr>
+<th><label for "gend">Gender: </label></th>
+<td><input autocomplete = "on" type = "text" id = "gend" name = "gendername" size = "23" placeholder = "your gender" required/></td>
+</tr>
+
+</tr>
+
+<tr>
+<th><label for "email">Email Address: </label></th>
+<td><input autocomplete = "on" type = "email" id = "email" name = "emailAdd" size = "23" placeholder = "input your email" required/></td>
+</tr>
+
+<tr>
+<th><label for "instname">Name of Institution: </label></th>
+<td><input autocomplete = "on" type = "text" id = "instname" name = "institution" size = "23" placeholder = "your institution name" required/></td>
+</tr>
+
+<tr>
+<th><label for "teln">Mobile Number: </label></th>
+<td><input autocomplete = "on" type = "tel" id = "teln" name = "mobilenumber" size = "23" placeholder = "input your mobile number" required/></td>
+</tr>
+
+
+<tr>
+<th><label for "pword">Password: </label></th>
+<td><input autocomplete = "on" type = "password" id = "pword" name = "userpassword" size = "23" placeholder = "input your password" required/></td>
+</tr>
+
+</table><br>
+
+<tr>
+<td><label for = "submit">
+<input id="sub" type="submit" value="REGISTER"/>
+</label></td>
+</tr>
+
+<tr>
+<td><label for = "reset">
+<input id="sub" type="reset" value="RESET"/>
+</label></td>
+</tr>
+
+</form><br>
+<hr>-->
+<!--<center><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdFTgBE07pm2QwpnX6nNiGG0vcTE8dYJq4QmthVRNJCZbScEA/viewform?embedded=true" width="350" height="150" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe></center>
+-->
+</div><br><br>
+
+<!--end of third main div-->
+
+<!--<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp this paragraph</p>-->
+
+</div>
+
+<a id = "botom"></a>
+<a href="#top">Back to top</a>
+
+
+<footer>
+<div class="foot">&copy Copyright 2024 Speech Synthesis. All right reserved.</div></br></br>
+</footer>
+<!-- end your code here -->
+<!-- link to the recorder source live demo: https://addpipe.com/simple-recorderjs-demo/ -->
+</body>
+
+</html>
