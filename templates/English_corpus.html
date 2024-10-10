@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>English Audio Recording Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css')}}">
+    <style> 
+    a {
+  color: #337ab7;
+}
+p {
+  margin-top: 1rem;
+  text-align: left;
+}
+a:hover {
+  color:#23527c;
+}
+a:visited {
+  color: blueviolet;
+}
+
+body {
+	line-height: 1.5;
+	font-family: sans-serif;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	color:black;
+	margin:2em;
+  background: white;
+}
+
+h1 {
+	text-decoration: none;
+	text-decoration-thickness: 3px;
+	text-underline-offset: 6px;
+	font-size: 220%;
+	font-weight: bold;
+  text-align: justify;
+}
+
+h2 {
+	font-weight: bold;
+	color: #005A9C;
+	font-size: 140%;
+	text-transform: uppercase;
+}
+
+red {
+	color: black;
+}
+
+#controls {
+  display: flex;
+  margin-top: 2rem;
+  max-width: 28em;
+} 
+
+button {
+  flex-grow: 1;
+  height: 3rem;
+  min-width: 10rem;
+  border: none;
+  border-radius: 0.15rem;
+  background: yellowgreen;
+  margin-left: 2px;
+  box-shadow: inset 0 -0.15rem 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:#ffffff;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+button:hover, button:focus {
+  outline: none;
+  background: blue;
+}
+
+button::-moz-focus-inner {
+  border: 0;
+}
+
+button:active {
+  box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.2);
+  line-height: 3rem;
+}
+
+button:disabled {
+  pointer-events: none;
+  background: lightblue;
+}
+button:first-child {
+  margin-left: 0;
+}
+
+#stopButton{
+  background: red;
+}
+
+audio {
+  display: block;
+  width: 100%;
+  margin-top: 0.2rem;
+}
+
+li {
+  list-style: none;
+  margin-bottom: 1rem;
+}
+
+#formats {
+  margin-top: 0.5rem;
+  font-size: 80%;
+}
+
+#recordingsList{
+	max-width: 28em;
+}
+#cl{
+    display: flex;
+    justify-content: space-around;
+    margin-left: 1px;
+    margin-right: 5px;}
+th{
+  text-align: left;
+}
+.foot {
+  text-align: center;
+  padding-left: 45px;
+}
+
+.lk{
+  text-decoration: none;
+  
+}
+
+.nw{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: white;
+}
+
+#part{
+  display:block;
+  justify-content: space-between;
+  margin: 5px;
+}
+.cg{
+  text-align: justify;
+}
+.but{
+  text-decoration: none;
+}
+.main6{
+  width: 700px;
+  text-align: justify;
+}
+#main9{
+  display: flex;
+}
+li{
+  list-style-type: decimal;
+  padding-left: 20px;
+}
+    </style>
+    
+  </head>
+  <body>
+    <div id = "main9">
+      <div><a style="color: #222; padding: 15px" href = "#botom">Back to bottom</a>
+      <a id = "top"></a></div>
+      <div><button class="cln" style="background-color: black;"><a class = "but" href = "{{ url_for('index') }}"><p style="color: white">Back to Home Page</p></a></button></div>
+      </div>
+    <div id = "cl">
+
+    <!-- The beginning of first main div-->
+    <div class="main6">
+    <h1>You are welcome to the English Audio Recording Page</h1>
+   
+    <p> This recorder records wav/PCM audio (48 kHz sampling rate) directly in the browser.
+        It uses Matt Diamond‘s <a target="_blank" href="https://github.com/mattdiamond/Recorderjs">Recorder.js</a> 
+        recorder, which is a popular JavaScript library for recording audio in the browser as uncompressed pcm audio in .wav containers. </p>
+    <p> The purpose of this page is to collect accented English corpus for the transcripts (available in the <a class = "but" href = "{{ url_for('Transcript_page') }}"> Transcript Page </a>) 
+        which are replica of the Yoruba corpus collected in <a class = "but" href = "{{ url_for('Yoruba_corpus') }}"> Yoruba Corpus Page </a></p>
+        
+   
+    <p class = "cg"><b>To fully utilise this recording and get the expected recording, kindly take note of the following instructions:</b><br><br>
+      <ol> 
+      <li>Select the range of sentences allocated to you from the transcript page.</li>
+      <li>Ensure your accent is properly taking care of in the recording.</li>
+      <li>Ensure you are cautious of the pace at which you pronounce each word in the sentence. 
+          Do not be too fast and do not be too slow. </li>
+      <li>Ensure your recorded words match that provided in the transcript index chosen. If you mistakenly 
+          deviate, kindly reload the page to start over.</li>
+      <li>Full pronunciation of all punctuation marks should be carried out e.g. you say "comma", "full-stop", 
+          "hyphen" etc. You also pronounce bracket as "open baracket" or "close bracket" </li>
+      <li>Exception to rule 5 is to pronounce words e.g. kg/m3 as "kilogram per meter cube" and not "kilogram slash meter cube." </li>
+      <li>Abbreviations should be pronounced in full. e.g. mmHg should be pronounced as "millimeters of mercury",
+          For the clinical domain data, words using the most known pronunciations by people. e.g. 
+          CT should be pronounced as "see tee" and not as "Computed Tomography",
+          "CXR" should be pronounced "Chest Xray" and not "see ex arr" </li>
+       <p style="color: black; font-weight: bold;">
+      <li><strong>For saving of audio file, if a text file has tag "TEDTALK_PARTA_3_", after recording, to save such file, use the 
+           tag name_index no"_ENG"</strong></li> <!---if it is an English audio file OR tag name + "_YOR" if it is a Yoruba audio file.<br>-->
+      <li><strong>For instance, if a text file is picked inside a file document "TED_TALK_MALARIA_ENGLISH_TRANSCRIPT_PARTA_3" whose tag is "TEDTALK_PARTA_3_",
+         and at index no 36, it is an English text file, and the English audio is saved with "TEDTALK_PARTA_3_36_ENG. <!---- and the Yoruba Equivalent is saved with 
+         "TEDTALK_PARTA_3_55_YOR"--> </strong></li>
+       <!--10. If it is a Yoruba text file that is picked first, say for instance, you pick 'YORLEIPZIPPARTA_2_18' <br>from the folder name
+           "LEIPZIP_YORUBA_TRANSCRIPT_PARTA_2", you also follow similar approach, by saving <br> the Yoruba and corresponding English audio
+            files with 'YORLEIPZIPPARTA_2_18_YOR" and <br>'YORLEIPZIPPARTA_2_18_ENG' respectively.<br>-->
+      <li><strong>Ensure you select the exact main folder i.e. public health or general domain folder, and
+           that you store the English audio recorded in the allocated folder particularly,
+           paying attention to TED_TALK_MALARIA_ENGLISH_TRANSCRIPT, _PARTA, and _3 for the case of 
+           TED_TALK_MALARIA_ENGLISH_TRANSCRIPT_PARTA_3 as the name of a sub-folder.</strong></li>
+       <!--11. Ensure you select the exact main folder i.e. public health or general domain folder, and <br>
+           that you store the English audio recorded in the allocated folder particular,<br>
+           paying attention to LEIPZIP_YORUBA_TRANSCRIPT, _PARTA, and _2 for the case of <br>
+           "LEIPZIP_YORUBA_TRANSCRIPT_PARTA_2" as the name of a sub-folder.<br>-->
+       </p>
+      <li>Upload your recordings using this link <a class= "lk" href="https://docs.google.com/document/d/1l9d4gbEdt4EElNE_dIrEvHrcXxbPsHBQ1tfcKjyACmo/edit?usp=drive_link"><b>Upload Audio Files</b></a> while simultaneously submit 
+           the details of your recordings using the Google form provided on the 
+           <strong>right-side</strong> of this page. </li>
+      <li>Record a maximum of 2.5 hours and take a break every 30 minutes of recordings.</li>
+      <li>You can make use of the text areas on the right to store texts. </li></p>
+      </ol>
+    <p> <strong>Submit the following details per audio recording using the form on your right-side: </strong><br>
+      <ol>
+      <li>File name you save the recording with.</li>
+      <li>The type of data you just recorded (either general or public health)</li>
+      <li>Duration (in seconds) of each of your recordings</li>
+      <li>Accent type utilised for the recording.</li>
+      </ol>
+    <div id="controls">
+  	 <button id="recordButton">Record</button>
+  	 <button id="pauseButton" disabled>Pause</button>
+  	 <button id="stopButton" disabled>Stop</button>
+    </div>
+    <div id="formats">Press the "Record" button to start recording <br>
+        Press the "Pause" button to pause and press again to resume<br>
+        Press the "Stop" button to end the recording and download your file.</div>
+  	<p><strong>Recordings:</strong></p>
+  	<ol id="recordingsList"></ol>
+    <!-- inserting these scripts at the end to be able to use all the elements in the DOM -->   
+  	<script src = "{{ url_for('static', filename='js/recorder.js')}}"></script>
+    <script src = "{{ url_for('static', filename='js/apps.js')}}"></script>
+    <!--<script src="js/recorder.js"></script>
+  	<script src="js/app.js"></script>-->
+   </div>
+   <!-- The end of first main div-->
+   
+   <!--The beginning of second main div-->
+   <div id = "part">
+   <div id = "p3">
+    <h><strong>Texts areas to store texts</strong></h>
+    <!--
+      <form id = "searchform" autocomplete = "on" action="{{ url_for('read_form3')}}" method="post">
+         <p><i>Kindly register the details of your recording</i></p>
+         <table id = "tb" border = "1" cellpadding = "5" cellspacing = "0">
+
+         <tr>
+            <th><label for "fname">File_name: </label></th>
+            <td><input autocomplete = "on" type = "text" id = "fname" name = "filename" size = "23" placeholder = "e.g. 000001_EC.wav" required/></td>
+         </tr>
+         
+         <tr>
+            <th><label for "fdomain">Data Type: </label></th>
+            <td><input autocomplete = "on" type = "text" id = "fdomain" name = "datatype" size = "23" placeholder = "General or Clinical/Public health" required/></td>
+         </tr>
+
+         <tr>
+            <th><label for "acc_type">Accent Type:</label></th>
+            <td><input autocomplete = "on" type = "text" id = "acc_type" name = "accounttype" size = "23" placeholder = "e.g. Nigerian English"/></td>
+            </tr>
+
+         <tr>
+            <th><label for "dur">Duration (seconds): </label></th>
+            <td><input autocomplete = "on" type = "tel" id = "dur" name = "durations" size = "23" placeholder = "e.g. Audio duration in secs" required/></td>
+            </tr>
+        </table><br>
+        
+        <button> Submit audio details </button>        
+     </form>-->
+     <div><textarea rows = "20" cols = "60">copy and paste your transcripts here for recording purpose</textarea></div>
+   </div>
+   
+    <hr style="color:green; height: auto;">
+   <div><textarea rows = "20" cols = "60">copy and paste your transcripts here for recording purpose</textarea></div>
+   <div style = "margin-top: 10px;">
+    <h><b>Uploading of Recorded Audio Files</b></h>
+    <p>Kindly follow the link below to upload your files.</p>
+    <button style="background-color: black;"><a class= "but" href="https://docs.google.com/document/d/1l9d4gbEdt4EElNE_dIrEvHrcXxbPsHBQ1tfcKjyACmo/edit?usp=drive_link"><b style="color: white">Upload Audio Files</b></a></button>
+    
+    <div class="nw"><h><strong>Submit Recording Details</strong></h>
+    <center><iframe src="https://docs.google.com/forms/d/e/1FAIpQLScxba-q8gZ2xvWv4UYcMxXNlGWihunkSeZcTO3J6x9jD3Pukg/viewform?embedded=true" width="450" height="300" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe></center>
+    </div> 
+  </div>
+
+   </div>
+<!-- The end of second main div-->
+ 
+  </div>
+
+  <a id = "botom"></a>
+  <a href="#top">Back to top</a>
+  
+  <footer>
+         <div class="foot">&copy Copyright 2024 ASPMIR SpeechTech Crowdsourcing Portal. All right reserved.</div></br></br>
+  </footer>
+  </body>
+</html>
